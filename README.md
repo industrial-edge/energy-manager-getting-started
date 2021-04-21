@@ -46,14 +46,14 @@ First, the S7 configurator and the Databus must be configured. Then, in the Data
 
 ### Used components
 
-- Industrial Edge Management (IEM) V1.1.0-48
-- S7 Connector Configurator V1.1.24
-- S7 Connector V1.1.24
-- IE Databus Configurator V1.1.24
-- IE Databus V1.1.15
-- Data Service V1.1.3
-- Energy Manager V1.1.2
-- Industrial Edge Device V 1.1.0-59
+- Industrial Edge Management (IEM) V1.2.0-34
+- S7 Connector Configurator V1.2.32
+- S7 Connector V1.2.26
+- IE Databus Configurator V1.2.23
+- IE Databus V1.2.16
+- Data Service V1.1.1
+- Energy Manager V1.2.0
+- Industrial Edge Device V 1.2.0-56
 - TIA Portal V16
 - S7-1511
 - Web browser (Mozilla or Chrome)
