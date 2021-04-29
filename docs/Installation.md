@@ -14,6 +14,7 @@
     - [Create Line Diagram](#create-line-diagram)
     - [Create Bulk Diagram](#create-bulk-diagram)
     - [Create Energy Media Analysis](#create-energy-media-analysis)
+    - [Create Gantt Diagram](#create-gantt-diagram)
 
 ## Configure PLC Connection
 
@@ -207,3 +208,21 @@ Configure the contract information for your energy medium and the currency:
 ​Next, you can display the energy media analysis directly in the energy media dashboard. The dashboard is displayed automatically:
 
 ![Energy_Manager_Energy_media_display](graphics/Energy_Manager_Energy_media_display.PNG)
+
+### Create Gantt Diagram
+
+​The Gantt widget shows you the status of a machine at a glance using different color codes. For example, the status can represent the current state or the state within a specific time range.
+
+Select the Heatmap widget:
+
+![Energy_Manager_Gantt_widget](graphics/Energy_Manager_gantt_widget.PNG)
+
+Creating status mappings for the "Gantt" widget:
+
+![Energy_Manager_Status_Mapping](graphics/Energy_Manager_gantt_status_mapping.PNG)
+
+Click on the "Enable Zoom" button to zoom in on the Gantt Chart too see the Machine Status better:
+
+![Energy_Manager_Gantt_chart](graphics/Energy_Manager_gantt_chart.PNG)
+
+![Energy_Manager_Gantt_chart_Zoom](graphics/Energy_Manager_gantt_chart_zoom.PNG)
