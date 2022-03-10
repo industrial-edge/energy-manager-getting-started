@@ -21,8 +21,7 @@ This guide shows how to use the Industrial Edge application Energy Manager.
 
 ### Overview
 
-The application Energy Manager provides information about how much energy has been consumed at any time. It will help to make the transition from energy transparency to energy efficiency. By analyzing the energy consumption together with the process data (such as temperatures, pressures etc.), processes and plants can be optimized. The recorded energy data provide more planning reliability.
-The Energy Manager provides one or more dashboards for data and energy analysis. Depending on the needs, there are several widget types available.
+The application Energy Manager provides information about how much energy has been consumed at any time. It will help to make the transition from energy transparency to energy efficiency. By analyzing the energy consumption together with the process data, processes and plants can be optimized. The Energy Manager provides one or more dashboards for data and energy analysis. Depending on the needs, there are several widget types available.
 
 ![widgets](docs/graphics/Widgets.png)
 
