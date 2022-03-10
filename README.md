@@ -1,6 +1,6 @@
 # Energy Manager application example
 
-This example shows how to use the Industrial Edge App “Energy Manager” 
+This guide shows how to use the Industrial Edge application Energy Manager.
 
 - [Energy Manager application example](#energy-manager-application-example)
   - [Description](#description)
@@ -21,7 +21,12 @@ This example shows how to use the Industrial Edge App “Energy Manager”
 
 ### Overview
 
-This document describes how you can display important PLC data such as energy data or costs for energy consumers in Energy Manager.
+The application Energy Manager provides information about how much energy has been consumed at any time. It will help to make the transition from energy transparency to energy efficiency. By analyzing the energy consumption together with the process data (such as temperatures, pressures etc.), processes and plants can be optimized. The recorded energy data provide more planning reliability.
+The Energy Manager provides one or more dashboards for data and energy analysis. Depending on the needs, there are several widget types available.
+
+![widgets](docs/graphics/Widgets.png)
+
+This repository describes how to use the Energy Manager for analyzing and optimizing energy consumption.
 
 ![overview](docs/graphics/Overview.PNG)
 
