@@ -2,9 +2,6 @@
 
 - [Configuration](#configuration)
   - [Configure PLC Connection](#configure-plc-connection)
-    - [Configure Databus](#configure-databus)
-    - [Configure S7 Connector](#configure-s7-connector)
-    - [Configure Data Service](#configure-data-service)
   - [Configure Energy Manager](#configure-energy-manager)
     - [Create Sankey Diagram](#create-sankey-diagram)
     - [Create Duration Curve](#create-duration-curve)
@@ -18,70 +15,29 @@
 
 ## Configure PLC Connection
 
-To read data from the PLC and provide the data, we will use S7 Connector to establish connection with the PLC via OPC UA.
+To read data from the PLC and provide the data, we will use the app S7 Connector to establish a connection to the PLC via OPC UA. The S7 Connector publishes the data on the Databus, where the app Data Service can model and collect the energy data, that is needed. In order to build this infrastructure, these apps must be configured properly:
 
-The S7 Connector sends the data to the Databus, where the Data Service app can collect what is needed.
-
-In order to build this infrastructure, these apps must be configured properly:
-
-- Databus
-- S7 Connector
+- IE Databus
+- SIMATIC S7 Connector
 - Data Service
 
-### Configure Databus
+Please refer to [using the Data Service](https://github.com/industrial-edge/data-service) for detailed instructions.
 
-In your IEM open the Databus and launch the configurator.
+Finally the configurations should look like this:
 
-Add a user with this topic:
-`"ie/#"`
-
-![ie_databus_user](graphics/IE_Databus_User.PNG)
+**IE Databus**
 
 ![ie_databus](graphics/IE_Databus.PNG)
 
-Deploy the configuration.
-
-### Configure S7 Connector
-
-In your IEM open the S7 Connector and launch the configurator.
-
-Add a data source:
+**S7 Connector**
 
 ![S7_connector_data_source](graphics/S7_Connector_Data_Source.PNG)
 
-Add needed tags:
-
 ![s7_connector_config](graphics/S7_Connector_Configuration.PNG)
 
-Edit the settings:
-
-![s7_connector_settings](graphics/S7_Connector_Settings.PNG)
-
-Hint: Username and password should be the same for all system apps, e.g. "edge" / "edge".
-
-Deploy and start the project.
-
-### Configure Data Service
-
-In your IED open the Data Service 
-
-Add a SIMATIC S7 Connector:
-
-![Data_Service_Adapter](graphics/Data_Service_Adapters.PNG)
-
-Edit the settings with you use in S7 Connector:
-
-![Data_Service_Adapter_S7_Connector](graphics/Data_Service_Adapters_S7_Connector.PNG)
-
-click on "Assets & Connectivity" at the top of the left-hand page and create your first variables.
-
-Select the S7 Connector in "Choose an Adapter" and all "GDB_signals_energySignals_" in "choose a tag":
+**Data Service**
 
 ![Data_Service_Aspects](graphics/Data_Service_Data_Service_Variable.PNG)
-
-click on "Aspects" and select all "GDB_signals_energySignals_":
-
-![Data_Service_Variables](graphics/Data_Service_Data_Service_Aspects.PNG)
 
 ## Configure Energy Manager
 
@@ -151,7 +107,7 @@ Create Heatmap diagram of total energy consumption based on KPI:
 
 ![Energy_Manager_Heatmap_total_energy_consumption_display](graphics/Energy_Manager_Heatmap_display.PNG)
 
-### Create Cost Calculation 
+### Create Cost Calculation
 
 Calculation of the costs for energy and water via KPI formula. Calculation of total costs per bottle via KPI formula.
 
