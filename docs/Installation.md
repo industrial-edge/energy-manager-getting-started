@@ -10,8 +10,7 @@
     - [Create diagram](#create-diagram)
     - [Create sankey diagram](#create-sankey-diagram)
     - [Create duration curve](#create-duration-curve)
-    - [Create energy media analysis](#create-energy-media-analysis)
-    - [Create gantt diagram](#create-gantt-diagram)
+  - [Energy Manager: Energy media analysis](#energy-manager-energy-media-analysis)
 
 ## Configure PLC Connection
 
@@ -170,21 +169,16 @@ Here we want to display the consumption costs for energy and water as line diagr
 2) enter a widget name and set the KPI calculation period to 15 Minutes > Continue
 3) click "New KPI instance" to create an instance based on the KPI type 'Costs energy', enter a name, select the KPI type and link the parameter 'TotalEnergy' to the already existing instance of 'Total Energy'
 
-![Energy_Manager_Line_KPI_Instance_1](/docs/graphics/Energy_Manager_Line_KPI_Instance_1.png
+![Energy_Manager_Line_KPI_Instance_1](/docs/graphics/Energy_Manager_Line_KPI_Instance_1.png)
 
 3) Again click "New KPI instance" to create an instance based on the KPI type 'Costs water', enter a name, selectthe KPI type and link the parameter 'WaterConsumption' to the signal 'waterConsumptionFillingTank' with aggregation 'Last' > Continue
 
-![Energy_Manager_Line_KPI_Instance_2](/docs/graphics/Energy_Manager_Line_KPI_Instance_2.png
+![Energy_Manager_Line_KPI_Instance_2](/docs/graphics/Energy_Manager_Line_KPI_Instance_2.png)
 
 4) no need to change anything in the general display options > Continue
 5) no need to change anyting in the Chart dispaly options > Finish
 
 ![Energy_Manager_Line_Diagram](/docs/graphics/Energy_Manager_Line_Diagram.png)
-
-
-
-## Energy Manager: Energy media analysis
-
 
 ### Create sankey diagram
 
@@ -224,7 +218,7 @@ Create single Duration Curve diagrams for each energy and water consumption valu
 
 ![Energy_Manager_Duration_Curve](graphics/Energy_Manager_duration_curve.PNG)
 
-### Create energy media analysis
+## Energy Manager: Energy media analysis
 
 ​You use the energy media analysis to manage and calculate energy data, such as power and gas from the machines and plants. In the configuration, you create all required energy media and can then define for each asset which energy data it requires. Using the stored contract information, you can then convert the consumption of the individual energy media directly into the resulting costs and CO2 emissions.
 
@@ -253,21 +247,3 @@ Configure the contract information for your energy medium and the currency:
 ​Next, you can display the energy media analysis directly in the energy media dashboard. The dashboard is displayed automatically:
 
 ![Energy_Manager_Energy_media_display](/docs/graphics/Energy_Manager_Energy_media_display.PNG)
-
-### Create gantt diagram
-
-​The Gantt widget shows you the status of a machine at a glance using different color codes. For example, the status can represent the current state or the state within a specific time range.
-
-Select the Heatmap widget:
-
-![Energy_Manager_Gantt_widget](/docs/graphics/Energy_Manager_gantt_widget.PNG)
-
-Creating status mappings for the "Gantt" widget:
-
-![Energy_Manager_Status_Mapping](/docs/graphics/Energy_Manager_gantt_status_mapping.PNG)
-
-Click on the "Enable Zoom" button to zoom in on the Gantt Chart too see the Machine Status better:
-
-![Energy_Manager_Gantt_chart](/docs/graphics/Energy_Manager_gantt_chart.PNG)
-
-![Energy_Manager_Gantt_chart_Zoom](/docs/graphics/Energy_Manager_gantt_chart_zoom.PNG)
