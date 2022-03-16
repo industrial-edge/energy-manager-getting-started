@@ -44,6 +44,8 @@ Finally the configurations should look like this:
 
 KPI stands for **Key Performance Indicator**. KPI types are formulas made up of operands, constants, and operators. A KPI instance can be created either during the widget configuration or in the parameter list on the asset. KPI types can be instantiated multiple times. When you make changes to the KPI type, these changes are also implemented in all KPI instances.
 
+Open the app Energy Manager on your Industrial Edge Device.
+
 ### Create KPI type
 
 In this example a KPI type could be:
@@ -102,11 +104,14 @@ Follow these steps to create a KPI instance in the parameter list based on our K
 
 ## Energy Manager: Data analysis with widgets
 
-Open the app Energy Manager on your Industrial Edge Device.
-
 Within the Energy Manager you can create custom dashboards for data analysis. The input data comes from the previously configured app Data Service. The modelled data structure is then automatically displayed in the Energy Manager navigation tree.
 
-At least one dashboard must be created on the dedicated asset.
+At least one dashboard must be created on the dedicated asset:
+
+- select the tab "My Plant"
+- go to the dedicated asset "Energy"
+- click "Create first dashboard"
+- enter a name for the dashboard and save
 
 ![entry](/docs/graphics/Energy_Manager_Entry.png)
 
@@ -118,21 +123,21 @@ Below it is described how to create some characteristic widgets for energy data.
 
 ### Create Heatmap Diagram
 
-Using the Heatmap, you can visualize the intensity of data values over time. You can, for example, display the energy consumption (red = high energy consumption; green = low energy consumption), temperatures or production quantities in a specific time range.
+Using the Heatmap, you can visualize the intensity of data values over time. You can, for example, display the energy consumption (red = high energy consumption; green = low energy consumption) in a specific time range. Here we create the Heatmap based on the previously generated KPI instance 'Total energy'.
 
 - select the tab "My Plant"
 - go to the newly created dashboard
-- select "create first widget" to start the wizard
-- choose the Heatmap widget type > Continue
-- enter a widget name > Continue
-- 
+- select "Create first widget" to start the wizard
 
-Create Heatmap diagram of total energy consumption based on KPI:
+1) choose the Heatmap widget type > Continue
+2) enter a widget name and set the KPI calculation period to 1 Minute > Continue
+3) click "Select parameter" and choose the KPI instance for 'Total energy' > Continue
+4) no need to change anything in the general display options > Continue
+5) no need to change anyting in the Heatmap dispaly options > Finish
 
-![Energy_Manager_Heatmap_total_energy_consumption_KPI](/docs/graphics/Energy_Manager_Heatmap_KPI.PNG)
+This Heatmap now shows the total energy consumption over one day:
 
-![Energy_Manager_Heatmap_total_energy_consumption_display](/docs/graphics/Energy_Manager_Heatmap_display.PNG)
-
+![Energy_Manager_Heatmap](/docs/graphics/Energy_Manager_Heatmap.png)
 
 
 
