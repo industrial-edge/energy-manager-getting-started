@@ -6,13 +6,12 @@
     - [Create KPI type](#create-kpi-type)
     - [Create KPI instance](#create-kpi-instance)
   - [Energy Manager: Data analysis with widgets](#energy-manager-data-analysis-with-widgets)
-    - [Create Heatmap Diagram](#create-heatmap-diagram)
-    - [Create Sankey Diagram](#create-sankey-diagram)
-    - [Create Duration Curve](#create-duration-curve)
-    - [Create Line Diagram](#create-line-diagram)
-    - [Create Bulk Diagram](#create-bulk-diagram)
-    - [Create Energy Media Analysis](#create-energy-media-analysis)
-    - [Create Gantt Diagram](#create-gantt-diagram)
+    - [Create heatmap diagram](#create-heatmap-diagram)
+    - [Create diagram](#create-diagram)
+    - [Create sankey diagram](#create-sankey-diagram)
+    - [Create duration curve](#create-duration-curve)
+    - [Create energy media analysis](#create-energy-media-analysis)
+    - [Create gantt diagram](#create-gantt-diagram)
 
 ## Configure PLC Connection
 
@@ -66,7 +65,7 @@ Follow these steps to create a new KPI type:
 
 - save the KPI type
 
-It is also possible to create a **cost calculation** via KPI formulas. In this example we calculate the energy costs as well as the total consumption costs.
+It is also possible to create a **cost calculation** via KPI formulas. In this example we calculate the energy costs as well as the water costs.
 
 Create two further KPI types:
 ```
@@ -76,7 +75,7 @@ Costs energy = Total energy * 0.35
 ![Energy_Manager_KPI_Type_2](/docs/graphics/Energy_Manager_KPI_Type_2.png)
 
 ```
-Costs total = Energy costs + Water consumption * 0.21
+Costs water = Water consumption * 0.21
 ```
 
 ![Energy_Manager_KPI_Type_3](/docs/graphics/Energy_Manager_KPI_Type_3.png)
@@ -121,9 +120,11 @@ Depending on the needs, there are several widget types available:
 
 Below it is described how to create some characteristic widgets for energy data.
 
-### Create Heatmap Diagram
+### Create heatmap diagram
 
-Using the Heatmap, you can visualize the intensity of data values over time. You can, for example, display the energy consumption (red = high energy consumption; green = low energy consumption) in a specific time range. Here we create the Heatmap based on the previously generated KPI instance 'Total energy'.
+Using the Heatmap, you can visualize the intensity of data values over time.
+
+You can, for example, display the energy consumption (red = high energy consumption; green = low energy consumption) in a specific time range. Here we create the Heatmap based on the previously generated KPI instance 'Total energy':
 
 - select the tab "My Plant"
 - go to the newly created dashboard
@@ -139,14 +140,53 @@ This Heatmap now shows the total energy consumption over one day:
 
 ![Energy_Manager_Heatmap](/docs/graphics/Energy_Manager_Heatmap.png)
 
+### Create diagram
 
+Using the Diagram widget, you can display parameter values or calculated KPI values over time. There are several diagram types available. Also different aggregation functions can be selected for the values.
+
+**Bulk diagram**
+
+Here we want to display the KPI value for 'Total energy' for every 15 minutes as bulk diagram:
+
+- go to the dashboard
+- click the settings button and choose "New widget" to start the wizard
+
+1) choose the Diagram widget type > Continue
+2) enter a widget name and set the KPI calculation period to 15 Minutes > Continue
+3) click "Select parameter" and choose the KPI instance for 'Total energy' > Continue
+4) no need to change anything in the general display options > Continue
+5) choose "Bar" in the dropdown field for the chart type > Finish
+
+![Energy_Manager_Bulk_Diagram](/docs/graphics/Energy_Manager_Bulk_Diagram.png)
+
+**Line diagram**
+
+Here we want to display the consumption costs for energy and water as line diagram. The diagram is based on the predefined KPI types 'Costs energy' and 'Costs water', but the KPI instances must be defined within the wizard:
+
+- go to the dashboard
+- click the settings button and choose "New widget" to start the wizard
+
+1) choose the Diagram widget type > Continue
+2) enter a widget name and set the KPI calculation period to 15 Minutes > Continue
+3) click "New KPI instance" to create an instance based on the KPI type 'Costs energy', enter a name, select the KPI type and link the parameter 'TotalEnergy' to the already existing instance of 'Total Energy'
+
+![Energy_Manager_Line_KPI_Instance_1](/docs/graphics/Energy_Manager_Line_KPI_Instance_1.png
+
+3) Again click "New KPI instance" to create an instance based on the KPI type 'Costs water', enter a name, selectthe KPI type and link the parameter 'WaterConsumption' to the signal 'waterConsumptionFillingTank' with aggregation 'Last' > Continue
+
+![Energy_Manager_Line_KPI_Instance_2](/docs/graphics/Energy_Manager_Line_KPI_Instance_2.png
+
+4) no need to change anything in the general display options > Continue
+5) no need to change anyting in the Chart dispaly options > Finish
+
+![Energy_Manager_Line_Diagram](/docs/graphics/Energy_Manager_Line_Diagram.png)
 
 
 
 ## Energy Manager: Energy media analysis
 
 
-### Create Sankey Diagram
+### Create sankey diagram
 
 ​Using the ​Sankey diagram​, energy flows can be displayed as arrows whose width is proportional to the flow rate. This makes it easy for you to recognize, for example, how energy is flowing through your plant.
 
@@ -172,7 +212,7 @@ Create Sankey diagram of combined energy and water consumption including single 
 
 ![Energy_Manager_Sankey_Diagram](graphics/Energy_Manager_sankey_diagram.PNG)
 
-### Create Duration Curve
+### Create duration curve
 
 ​By using the ​duration curve​, you can display a chart sorted by size. ​In the ​duration curve​, the measured values of a specific time range are displayed collected and sorted. The highest value is displayed on the far left, and the lowest value on the far right.
 
@@ -184,25 +224,7 @@ Create single Duration Curve diagrams for each energy and water consumption valu
 
 ![Energy_Manager_Duration_Curve](graphics/Energy_Manager_duration_curve.PNG)
 
-### Create Line Diagram
-
-Create line diagram of costs for energy and water and total costs per bottle based on KPI:
-
-![Energy_Manager_line_diagram_parameter](/docs/graphics/Energy_Manager_line_diagram_parameter.PNG)
-
-![Energy_Manager_line_diagram_costs](/docs/graphics/Energy_Manager_line_diagram_costs.PNG)
-
-### Create Bulk Diagram
-
-Calculation/Aggregation of energy consumption within 15 minutes:
-
-![Energy_Manager_energy_consumption_15_minutes](/docs/graphics/Energy_Manager_energy_consumption_15_minutes.PNG)
-
-Create Bulk diagram for aggregated energy consumption:
-
-![Energy_Manager_energy_consumption_Bulk_diagram](/docs/graphics/Energy_Manager_energy_consumption_Bulk_diagram.PNG)
-
-### Create Energy Media Analysis
+### Create energy media analysis
 
 ​You use the energy media analysis to manage and calculate energy data, such as power and gas from the machines and plants. In the configuration, you create all required energy media and can then define for each asset which energy data it requires. Using the stored contract information, you can then convert the consumption of the individual energy media directly into the resulting costs and CO2 emissions.
 
@@ -232,7 +254,7 @@ Configure the contract information for your energy medium and the currency:
 
 ![Energy_Manager_Energy_media_display](/docs/graphics/Energy_Manager_Energy_media_display.PNG)
 
-### Create Gantt Diagram
+### Create gantt diagram
 
 ​The Gantt widget shows you the status of a machine at a glance using different color codes. For example, the status can represent the current state or the state within a specific time range.
 
