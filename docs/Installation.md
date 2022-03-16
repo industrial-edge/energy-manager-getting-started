@@ -2,11 +2,13 @@
 
 - [Configuration](#configuration)
   - [Configure PLC Connection](#configure-plc-connection)
-  - [Configure Energy Manager](#configure-energy-manager)
+  - [Energy Manager: KPI calculation](#energy-manager-kpi-calculation)
+    - [Create KPI type](#create-kpi-type)
+    - [Create KPI instance](#create-kpi-instance)
+  - [Energy Manager: Data analysis with widgets](#energy-manager-data-analysis-with-widgets)
+    - [Create Heatmap Diagram](#create-heatmap-diagram)
     - [Create Sankey Diagram](#create-sankey-diagram)
     - [Create Duration Curve](#create-duration-curve)
-    - [Create KPI](#create-kpi)
-    - [Create Heatmap Diagram](#create-heatmap-diagram)
     - [Create Cost Calculation](#create-cost-calculation)
     - [Create Line Diagram](#create-line-diagram)
     - [Create Bulk Diagram](#create-bulk-diagram)
@@ -39,15 +41,108 @@ Finally the configurations should look like this:
 
 ![Data_Service_Aspects](/docs/graphics/Data_Service_Data_Service_Variable.PNG)
 
-## Configure Energy Manager
+## Energy Manager: KPI calculation
+
+KPI stands for **Key Performance Indicator**. KPI types are formulas made up of operands, constants, and operators. A KPI instance can be created either during the widget configuration or in the parameter list on the asset. KPI types can be instantiated multiple times. When you make changes to the KPI type, these changes are also implemented in all KPI instances.
+
+### Create KPI type
+
+In this example a KPI type could be:
+
+```
+Total energy = Energy filling tank + Energy heating tank + Energy filling bottles
+```
+
+Follow these steps to create a new KPI type:
+
+- select the tab "Configuration"
+- choose "KPI types"
+- click "New KPI type"
+- enter a unique name and a unit
+- in the formula editor, use operants and operators to create this formula:
+
+![Energy_Manager_KPI_Type](/docs/graphics/Energy_Manager_KPI_Type.png)
+
+- save the KPI type
+
+### Create KPI instance
+
+KPI instances can be created either in the parameter list of an asset (respective dashboard) or in the "Parameter" step when a widget is created. They can be derived from a KPI type or can be created typeless.
+
+Automatic KPI instances are created additionally when you create energy media and assign contract information.
+
+New KPI instances cause costs. The number of currently used KPI instances is displayed in the tab "Settings" under "Usage information".
+
+Follow these steps to create a KPI instance based on our KPI type 'Total energy':
+
+- select the tab "My Plant"
+- go to the dedicated asset "Energy" and open the parameter view
+
+![Energy_Manager_Parameter_View](/docs/graphics/Energy_Manager_Parameter_View.png)
+
+- click "New KPI instance" to add an instance
+- enter a unique instance name
+- select "On the basis of a KPI type"
+- select the KPI type for 'Total energy'
+- link all operands to a variable coming from Data Service and set the aggregation to "Last"
+
+![Energy_Manager_KPI_Instance](/docs/graphics/Energy_Manager_KPI_Instance.png)
+
+- save the KPI instance
+
+### Create Cost Calculation
+
+Calculation of the costs for energy and water via KPI formula. Calculation of total costs per bottle via KPI formula.
+
+Created KPI type “KPI costs energy total” and “KPI costs total”:
+
+![Energy_Manager_KPI_costs_energy_total](/docs/graphics/Energy_Manager_KPI_costs_energy_total.PNG)
+
+![Energy_Manager_KPI_total_costs](/docs/graphics/Energy_Manager_KPI_total_costs.PNG)
+
+
+
+
+## Energy Manager: Data analysis with widgets
 
 Open the app Energy Manager on your Industrial Edge Device.
 
 Within the Energy Manager you can create custom dashboards for data analysis. The input data comes from the previously configured app Data Service. The modelled data structure is then automatically displayed in the Energy Manager navigation tree.
 
-At least one dashboard must be created on the dedicated asset. Depending on the needs, there are several widget types available:
+At least one dashboard must be created on the dedicated asset.
+
+![entry](/docs/graphics/Energy_Manager_Entry.png)
+
+Depending on the needs, there are several widget types available:
 
 ![widgets](/docs/graphics/Widgets.png)
+
+Below it is described how to create some characteristic widgets for energy data.
+
+### Create Heatmap Diagram
+
+Using the Heatmap, you can visualize the intensity of data values over time. You can, for example, display the energy consumption (red = high energy consumption; green = low energy consumption), temperatures or production quantities in a specific time range.
+
+- select the tab "My Plant"
+- go to the newly created dashboard
+- select "create first widget" to start the wizard
+- choose the Heatmap widget type > Continue
+- enter a widget name > Continue
+- 
+
+Create Heatmap diagram of total energy consumption based on KPI:
+
+![Energy_Manager_Heatmap_total_energy_consumption_KPI](/docs/graphics/Energy_Manager_Heatmap_KPI.PNG)
+
+![Energy_Manager_Heatmap_total_energy_consumption_display](/docs/graphics/Energy_Manager_Heatmap_display.PNG)
+
+
+
+
+
+
+## Energy Manager: Energy media analysis
+
 
 ### Create Sankey Diagram
 
@@ -86,42 +181,6 @@ Select the Duration Curve widget:
 Create single Duration Curve diagrams for each energy and water consumption value:
 
 ![Energy_Manager_Duration_Curve](graphics/Energy_Manager_duration_curve.PNG)
-
-### Create KPI
-
-Click on "Configuration" on the left side and select "KPI types":
-
-![Energy_Manager_select_KPI](graphics/Energy_Manager_select_KPI.PNG)
-
-Create a new KPI type, klick on "New KPI type".
-
-Create a calculation of the total energy consumption via KPI formula:
-
-![Energy_Manager_total_energy_consumption](graphics/Energy_Manager_total_energy_consumption_KPI.PNG)
-
-### Create Heatmap Diagram
-
-​Using the ​Heatmap​, you can visualize the intensity of data values over time. You can, for example, display the energy consumption (red = high energy consumption; green = low energy consumption), temperatures or production quantities in a specific time range.
-
-Select the Heatmap widget:
-
-![Energy_Manager_Heatmap_widget](/docs/graphics/Energy_Manager_heatmap_widget.PNG)
-
-Create Heatmap diagram of total energy consumption based on KPI:
-
-![Energy_Manager_Heatmap_total_energy_consumption_KPI](/docs/graphics/Energy_Manager_Heatmap_KPI.PNG)
-
-![Energy_Manager_Heatmap_total_energy_consumption_display](/docs/graphics/Energy_Manager_Heatmap_display.PNG)
-
-### Create Cost Calculation
-
-Calculation of the costs for energy and water via KPI formula. Calculation of total costs per bottle via KPI formula.
-
-Created KPI type “KPI costs energy total” and “KPI costs total”:
-
-![Energy_Manager_KPI_costs_energy_total](/docs/graphics/Energy_Manager_KPI_costs_energy_total.PNG)
-
-![Energy_Manager_KPI_total_costs](/docs/graphics/Energy_Manager_KPI_total_costs.PNG)
 
 ### Create Line Diagram
 
