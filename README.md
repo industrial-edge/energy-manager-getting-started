@@ -16,7 +16,6 @@ This guide shows how to use the Industrial Edge application Energy Manager.
   - [Contribution](#contribution)
   - [Licence and Legal Information](#licence-and-legal-information)
 
-
 ## Description
 
 ### Overview
@@ -33,7 +32,7 @@ A PLC controls a filling process and the relevant energy data is collected by an
 
 ## Requirements
 
-###  Prerequisities
+### Prerequisities
 
 - Access to an Industrial Edge Management (IEM) with onboarded Industrial Edge Device (IED)
 - Installed system configurators and apps (see list "Used components")
@@ -63,6 +62,7 @@ The used TIA Portal project can be found in the [miscellenous repository](https:
 ## Configuration steps
 
 You can find the further information about the following steps in the [docs](docs/Installation.md)
+
 - Configure PLC Connection
 - Configure Energy Manager
 
@@ -73,9 +73,10 @@ Once the Energy Manager is configured, data such as energy consumption, energy c
 ## Documentation
 
 You can find further documentation and help in the following links
-  - [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
-  - [Industrial Edge Forum](https://www.siemens.com/industrial-edge-forum)
-  - [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
+
+- [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
+- [Industrial Edge Forum](https://www.siemens.com/industrial-edge-forum)
+- [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
   
 ## Contribution
 
