@@ -27,21 +27,27 @@ Finally the configurations should look like this:
 
 **IE Databus**
 
-![ie_databus](graphics/IE_Databus.PNG)
+![ie_databus](/docs/graphics/IE_Databus.PNG)
 
 **S7 Connector**
 
-![S7_connector_data_source](graphics/S7_Connector_Data_Source.PNG)
+![S7_connector_data_source](/docs/graphics/S7_Connector_Data_Source.PNG)
 
-![s7_connector_config](graphics/S7_Connector_Configuration.PNG)
+![s7_connector_config](/docs/graphics/S7_Connector_Configuration.PNG)
 
 **Data Service**
 
-![Data_Service_Aspects](graphics/Data_Service_Data_Service_Variable.PNG)
+![Data_Service_Aspects](/docs/graphics/Data_Service_Data_Service_Variable.PNG)
 
 ## Configure Energy Manager
 
-In your IED Web UI open the app Energy Manager
+Open the app Energy Manager on your Industrial Edge Device.
+
+Within the Energy Manager you can create custom dashboards for data analysis. The input data comes from the previously configured app Data Service. The modelled data structure is then automatically displayed in the Energy Manager navigation tree.
+
+At least one dashboard must be created on the dedicated asset. Depending on the needs, there are several widget types available:
+
+![widgets](/docs/graphics/Widgets.png)
 
 ### Create Sankey Diagram
 
@@ -99,13 +105,13 @@ Create a calculation of the total energy consumption via KPI formula:
 
 Select the Heatmap widget:
 
-![Energy_Manager_Heatmap_widget](graphics/Energy_Manager_heatmap_widget.PNG)
+![Energy_Manager_Heatmap_widget](/docs/graphics/Energy_Manager_heatmap_widget.PNG)
 
 Create Heatmap diagram of total energy consumption based on KPI:
 
-![Energy_Manager_Heatmap_total_energy_consumption_KPI](graphics/Energy_Manager_Heatmap_KPI.PNG)
+![Energy_Manager_Heatmap_total_energy_consumption_KPI](/docs/graphics/Energy_Manager_Heatmap_KPI.PNG)
 
-![Energy_Manager_Heatmap_total_energy_consumption_display](graphics/Energy_Manager_Heatmap_display.PNG)
+![Energy_Manager_Heatmap_total_energy_consumption_display](/docs/graphics/Energy_Manager_Heatmap_display.PNG)
 
 ### Create Cost Calculation
 
@@ -113,27 +119,27 @@ Calculation of the costs for energy and water via KPI formula. Calculation of to
 
 Created KPI type “KPI costs energy total” and “KPI costs total”:
 
-![Energy_Manager_KPI_costs_energy_total](graphics/Energy_Manager_KPI_costs_energy_total.PNG)
+![Energy_Manager_KPI_costs_energy_total](/docs/graphics/Energy_Manager_KPI_costs_energy_total.PNG)
 
-![Energy_Manager_KPI_total_costs](graphics/Energy_Manager_KPI_total_costs.PNG)
+![Energy_Manager_KPI_total_costs](/docs/graphics/Energy_Manager_KPI_total_costs.PNG)
 
 ### Create Line Diagram
 
 Create line diagram of costs for energy and water and total costs per bottle based on KPI:
 
-![Energy_Manager_line_diagram_parameter](graphics/Energy_Manager_line_diagram_parameter.PNG)
+![Energy_Manager_line_diagram_parameter](/docs/graphics/Energy_Manager_line_diagram_parameter.PNG)
 
-![Energy_Manager_line_diagram_costs](graphics/Energy_Manager_line_diagram_costs.PNG)
+![Energy_Manager_line_diagram_costs](/docs/graphics/Energy_Manager_line_diagram_costs.PNG)
 
 ### Create Bulk Diagram
 
 Calculation/Aggregation of energy consumption within 15 minutes:
 
-![Energy_Manager_energy_consumption_15_minutes](graphics/Energy_Manager_energy_consumption_15_minutes.PNG)
+![Energy_Manager_energy_consumption_15_minutes](/docs/graphics/Energy_Manager_energy_consumption_15_minutes.PNG)
 
 Create Bulk diagram for aggregated energy consumption:
 
-![Energy_Manager_energy_consumption_Bulk_diagram](graphics/Energy_Manager_energy_consumption_Bulk_diagram.PNG)
+![Energy_Manager_energy_consumption_Bulk_diagram](/docs/graphics/Energy_Manager_energy_consumption_Bulk_diagram.PNG)
 
 ### Create Energy Media Analysis
 
@@ -141,17 +147,17 @@ Create Bulk diagram for aggregated energy consumption:
 
 Select your dashboard and click on the name of the dashboard. Click on the "Asset Configuration":
 
-![Energy_Manager_asset_configuration_for_energy_data](graphics/Energy_Manager_asset_configuration_for_energy_data.PNG)
+![Energy_Manager_asset_configuration_for_energy_data](/docs/graphics/Energy_Manager_asset_configuration_for_energy_data.PNG)
 
 Click on "Assignment of energy medium":
 
-![Energy_Manager_asset_configuration_menu_contract_information](graphics/Energy_Manager_asset_configuration_menu_contract_information.PNG)
+![Energy_Manager_asset_configuration_menu_contract_information](/docs/graphics/Energy_Manager_asset_configuration_menu_contract_information.PNG)
 
 Click on "New row" to select the Energy Medium, for configure the Energy Media click on "Energy medium":
 
-![Energy_Manager_asset_configuration_energy_media_assignment](graphics/Energy_Manager_asset_configuration_energy_media_assignment.PNG)
+![Energy_Manager_asset_configuration_energy_media_assignment](/docs/graphics/Energy_Manager_asset_configuration_energy_media_assignment.PNG)
 
-![Energy_Manager_asset_configuration_energy_media](graphics/Energy_Manager_asset_configuration_energy_media.PNG)
+![Energy_Manager_asset_configuration_energy_media](/docs/graphics/Energy_Manager_asset_configuration_energy_media.PNG)
 
 Go back to "Asset Configuration" and click on "Contract Information".
 
@@ -159,11 +165,11 @@ Click on "Add energy medium" to select your energy medium.
 
 Configure the contract information for your energy medium and the currency:
 
-![Energy_Manager_asset_configuration_contract_information](graphics/Energy_Manager_asset_configuration_contract_information.PNG)
+![Energy_Manager_asset_configuration_contract_information](/docs/graphics/Energy_Manager_asset_configuration_contract_information.PNG)
 
 ​Next, you can display the energy media analysis directly in the energy media dashboard. The dashboard is displayed automatically:
 
-![Energy_Manager_Energy_media_display](graphics/Energy_Manager_Energy_media_display.PNG)
+![Energy_Manager_Energy_media_display](/docs/graphics/Energy_Manager_Energy_media_display.PNG)
 
 ### Create Gantt Diagram
 
@@ -171,14 +177,14 @@ Configure the contract information for your energy medium and the currency:
 
 Select the Heatmap widget:
 
-![Energy_Manager_Gantt_widget](graphics/Energy_Manager_gantt_widget.PNG)
+![Energy_Manager_Gantt_widget](/docs/graphics/Energy_Manager_gantt_widget.PNG)
 
 Creating status mappings for the "Gantt" widget:
 
-![Energy_Manager_Status_Mapping](graphics/Energy_Manager_gantt_status_mapping.PNG)
+![Energy_Manager_Status_Mapping](/docs/graphics/Energy_Manager_gantt_status_mapping.PNG)
 
 Click on the "Enable Zoom" button to zoom in on the Gantt Chart too see the Machine Status better:
 
-![Energy_Manager_Gantt_chart](graphics/Energy_Manager_gantt_chart.PNG)
+![Energy_Manager_Gantt_chart](/docs/graphics/Energy_Manager_gantt_chart.PNG)
 
-![Energy_Manager_Gantt_chart_Zoom](graphics/Energy_Manager_gantt_chart_zoom.PNG)
+![Energy_Manager_Gantt_chart_Zoom](/docs/graphics/Energy_Manager_gantt_chart_zoom.PNG)
