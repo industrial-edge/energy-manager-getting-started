@@ -9,7 +9,6 @@
     - [Create Heatmap Diagram](#create-heatmap-diagram)
     - [Create Sankey Diagram](#create-sankey-diagram)
     - [Create Duration Curve](#create-duration-curve)
-    - [Create Cost Calculation](#create-cost-calculation)
     - [Create Line Diagram](#create-line-diagram)
     - [Create Bulk Diagram](#create-bulk-diagram)
     - [Create Energy Media Analysis](#create-energy-media-analysis)
@@ -65,15 +64,26 @@ Follow these steps to create a new KPI type:
 
 - save the KPI type
 
+It is also possible to create a **cost calculation** via KPI formulas. In this example we calculate the energy costs as well as the total consumption costs.
+
+Create two further KPI types:
+```
+Costs energy = Total energy * 0.35
+```
+
+![Energy_Manager_KPI_Type_2](/docs/graphics/Energy_Manager_KPI_Type_2.png)
+
+```
+Costs total = Energy costs + Water consumption * 0.21
+```
+
+![Energy_Manager_KPI_Type_3](/docs/graphics/Energy_Manager_KPI_Type_3.png)
+
 ### Create KPI instance
 
-KPI instances can be created either in the parameter list of an asset (respective dashboard) or in the "Parameter" step when a widget is created. They can be derived from a KPI type or can be created typeless.
+KPI instances can be created either in the parameter list of an asset or in the "Parameter" step when a widget is created. They can be derived from a KPI type or can be created typeless. Automatic KPI instances are created additionally when you create energy media and assign contract information. New KPI instances cause costs. The number of currently used KPI instances is displayed in the tab "Settings" under "Usage information".
 
-Automatic KPI instances are created additionally when you create energy media and assign contract information.
-
-New KPI instances cause costs. The number of currently used KPI instances is displayed in the tab "Settings" under "Usage information".
-
-Follow these steps to create a KPI instance based on our KPI type 'Total energy':
+Follow these steps to create a KPI instance in the parameter list based on our KPI type 'Total energy':
 
 - select the tab "My Plant"
 - go to the dedicated asset "Energy" and open the parameter view
@@ -89,19 +99,6 @@ Follow these steps to create a KPI instance based on our KPI type 'Total energy'
 ![Energy_Manager_KPI_Instance](/docs/graphics/Energy_Manager_KPI_Instance.png)
 
 - save the KPI instance
-
-### Create Cost Calculation
-
-Calculation of the costs for energy and water via KPI formula. Calculation of total costs per bottle via KPI formula.
-
-Created KPI type “KPI costs energy total” and “KPI costs total”:
-
-![Energy_Manager_KPI_costs_energy_total](/docs/graphics/Energy_Manager_KPI_costs_energy_total.PNG)
-
-![Energy_Manager_KPI_total_costs](/docs/graphics/Energy_Manager_KPI_total_costs.PNG)
-
-
-
 
 ## Energy Manager: Data analysis with widgets
 
