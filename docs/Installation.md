@@ -247,14 +247,14 @@ The Energy Manager provides already some predefined energy media, but it is also
 
 ### Configuration of asset
 
-For each asset in the Energy Manager, you can define which energy media is required. Then the variables from Data Service can be assigned properly.
+For each asset in the Energy Manager, you can define which energy media is required. Then parameter can be assigned properly.
 
 Here we specifiy one asset:
 
 - select the tab "My Plant"
 - go to the asset you want to specify
 - click on the asset name and select "Asset Configuration"
-- chosse "Assignment of energy medium"
+- choose "Assignment of energy medium"
 
 ![Asset_Structure](graphics/Asset_Structure.png)
 
@@ -272,12 +272,7 @@ By assigning parameters that represent the energy medium, all KPI instances requ
 
 ### Defining contract information
 
-You can also store following contract information for each energy medium:
-
-- Contract valid from
-- Currency
-- Costs
-- CO2 equivalent
+You can also store following contract information for each energy medium: Contract valid from, Currency, Costs, CO2 equivalent.
 
 Here we define the contract information for one asset:
 
@@ -297,9 +292,7 @@ Here we define the contract information for one asset:
 
 ### Displaying the energy media analysis
 
-The energy media analysis is automatically displayed in the energy media dashboard. As soon as you have assigned a reference value to an energy medium, you will not only see the total for consumption, costs and CO2 equivalent but also the amount per unit.
-
-To display the energy media analysis, follow these steps:
+The energy media analysis is automatically displayed in the energy media dashboard:
 
 - select the tab "My Plant"
 - go to the asset you just specified
