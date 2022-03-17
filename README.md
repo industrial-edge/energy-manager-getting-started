@@ -28,7 +28,7 @@ This repository describes how to use the Energy Manager for analyzing and optimi
 
 ![overview](docs/graphics/Overview.PNG)
 
-A PLC controls a filling process and the relevant energy data is collected by an Edge Device via the SIMATIC S7 Connector. On the Edge Device the data is published to the internal Databus. Then the data must be collected and modeled via the Data Service. From there the Energy Manager can retrieve the data for further analysis. A custom dashboard with several widgets is created to visualize the energy data. Furthermore a KPI value is calculated and displayed.
+A PLC controls a filling process and the relevant energy data is collected by an Edge Device via the SIMATIC S7 Connector. On the Edge Device the data is published to the internal Databus. Then the data must be collected and modeled via the Data Service. From there the Energy Manager can retrieve the data for further analysis. First, we will proceed some KPI calculations. Then a custom dashboard with some widgets is created to visualize the energy data. Finally, we automatically create a dashboard using the energy media analysis.
 
 ## Requirements
 
@@ -61,14 +61,19 @@ The used TIA Portal project can be found in the [miscellenous repository](https:
 
 ## Configuration steps
 
-You can find the further information about the following steps in the [docs](docs/Installation.md)
+To setup the PLC connection that is required to use the Energy Manager, several applications must be configured.
 
-- Configure PLC Connection
-- Configure Energy Manager
+You can find further information about the configuration steps [here](/docs/Installation.md).
 
 ## Usage
 
-Once the Energy Manager is configured, data such as energy consumption, energy costs and energy flows can be visually displayed via the web UI interface.  
+The Energy Manager can be used for analyzing energy data.
+
+You can find detailed information about the usage [here](/docs/Usage.md):
+
+- KPI calculation within the Energy Manager
+- Data analysis using widgets
+- Energy media analysis
 
 ## Documentation
 
