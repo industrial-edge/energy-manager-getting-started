@@ -11,6 +11,10 @@
     - [Create sankey](#create-sankey)
     - [Create duration curve](#create-duration-curve)
   - [Energy Manager: Energy media analysis](#energy-manager-energy-media-analysis)
+    - [Configuration of energy media](#configuration-of-energy-media)
+    - [Configuration of asset](#configuration-of-asset)
+    - [Defining contract information](#defining-contract-information)
+    - [Displaying the energy media analysis](#displaying-the-energy-media-analysis)
 
 ## Configure PLC Connection
 
@@ -67,6 +71,7 @@ Follow these steps to create a new KPI type:
 It is also possible to create a **cost calculation** via KPI formulas. In this example we calculate the energy costs as well as the water costs.
 
 Create two further KPI types:
+
 ```
 Costs energy = Total energy * 0.35
 ```
@@ -204,48 +209,101 @@ Here we want to display the water and energy consumption as Sankey:
 
 ![Energy_Manager_Sankey_Links](/docs/graphics/Energy_Manager_Sankey_Links.png)
 
-7)  > Finish
+5) Finish
 
 ![Energy_Manager_Sankey](/docs/graphics/Energy_Manager_Sankey.png)
 
 ### Create duration curve
 
-​By using the ​duration curve​, you can display a chart sorted by size. ​In the ​duration curve​, the measured values of a specific time range are displayed collected and sorted. The highest value is displayed on the far left, and the lowest value on the far right.
+By using the duration curve, you can display a chart sorted by size. In the duration curve, the measured values of a specific time range are displayed collected and sorted. The highest value is displayed on the far left, and the lowest value on the far right.
 
-Select the Duration Curve widget:
+Here we want to display the KPI value for 'Total energy' as duration curve:
 
-![Energy_Manager_Duration_Curve_widget](graphics/Energy_Manager_duration_curve_widget.PNG)
+- go to the dashboard
+- click the settings button and choose "New widget" to start the wizard
 
-Create single Duration Curve diagrams for each energy and water consumption value:
+1) choose the Duration Curve widget type > Continue
+2) enter a widget name and set the KPI calculation period to 1 Minute > Continue
+3) click "Select parameter" and choose the KPI instance for 'Total energy' > Continue
+4) no need to change anything in the general display options > Continue
+5) no need to change anyting in the Heatmap dispaly options > Finish
 
-![Energy_Manager_Duration_Curve](graphics/Energy_Manager_duration_curve.PNG)
+![Energy_Manager_Duration_Curve](graphics/Energy_Manager_Duration_Curve.png)
 
 ## Energy Manager: Energy media analysis
 
-​You use the energy media analysis to manage and calculate energy data, such as power and gas from the machines and plants. In the configuration, you create all required energy media and can then define for each asset which energy data it requires. Using the stored contract information, you can then convert the consumption of the individual energy media directly into the resulting costs and CO2 emissions.
+You use the energy media analysis to manage and calculate energy data, such as power and gas from the machines and plants. In the configuration, you create all required energy media and can then define for each asset which energy data it requires. Using the stored contract information, you can then convert the consumption of the individual energy media directly into the resulting costs and CO2 emissions.
 
-Select your dashboard and click on the name of the dashboard. Click on the "Asset Configuration":
+### Configuration of energy media
 
-![Energy_Manager_asset_configuration_for_energy_data](/docs/graphics/Energy_Manager_asset_configuration_for_energy_data.PNG)
+The Energy Manager provides already some predefined energy media, but it is also possible to add further ones.
 
-Click on "Assignment of energy medium":
+- select the tab "Configuration"
+- choose "Energy media" to open a list of all existing energy media
+- some energy media are predefined, in our case "Electricity" and "Water" are suitable
+- edit the "Electricity" media and change the unit to "Wh", so that it suits to our process data
 
-![Energy_Manager_asset_configuration_menu_contract_information](/docs/graphics/Energy_Manager_asset_configuration_menu_contract_information.PNG)
+![Energy_Media](graphics/Energy_Media.png)
 
-Click on "New row" to select the Energy Medium, for configure the Energy Media click on "Energy medium":
+### Configuration of asset
 
-![Energy_Manager_asset_configuration_energy_media_assignment](/docs/graphics/Energy_Manager_asset_configuration_energy_media_assignment.PNG)
+For each asset in the Energy Manager, you can define which energy media is required. Then the variables from Data Service can be assigned properly.
 
-![Energy_Manager_asset_configuration_energy_media](/docs/graphics/Energy_Manager_asset_configuration_energy_media.PNG)
+Here we specifiy one asset:
 
-Go back to "Asset Configuration" and click on "Contract Information".
+- select the tab "My Plant"
+- go to the asset you want to specify
+- click on the asset name and select "Asset Configuration"
+- chosse "Assignment of energy medium"
 
-Click on "Add energy medium" to select your energy medium.
+![Asset_Structure](graphics/Asset_Structure.png)
 
-Configure the contract information for your energy medium and the currency:
+- add a new row and select "Electricity" as energy medium
+- in the parameter column, click "Select parameter" to assign a suitable process value, here we choose the KPI instance for 'Total Energy'
+- add a new row and select "Water" as energy medium
+- in the parameter column, click "Select parameter" to assign a suitable process value, here we choose the parameter 'waterConsumption' and select "Last" as aggregation type
+- save the configuration
 
-![Energy_Manager_asset_configuration_contract_information](/docs/graphics/Energy_Manager_asset_configuration_contract_information.PNG)
+![Energy_Media_Asset](graphics/Energy_Media_Asset.png)
 
-​Next, you can display the energy media analysis directly in the energy media dashboard. The dashboard is displayed automatically:
+By assigning parameters that represent the energy medium, all KPI instances required for the energy media analysis are automatically created in the parameter list.
 
-![Energy_Manager_Energy_media_display](/docs/graphics/Energy_Manager_Energy_media_display.PNG)
+![Energy_Media_Instances](graphics/Energy_Media_Instances.png)
+
+### Defining contract information
+
+You can also store following contract information for each energy medium:
+
+- Contract valid from
+- Currency
+- Costs
+- CO2 equivalent
+
+Here we define the contract information for one asset:
+
+- select the tab "My Plant"
+- go to the asset you want to specify
+- click on the asset name and select "Asset Configuration"
+- chosse "Contract information"
+- set the currency to "Euro (EUR)"
+- add the energy medium "Electricity"
+- open the settings and add a contract
+- configure the contract information and save
+- add the energy medium "Water"
+- open the settings and add a contract
+- configure the contract information and save
+
+![Contract_Information](graphics/Contract_Information.png)
+
+### Displaying the energy media analysis
+
+The energy media analysis is automatically displayed in the energy media dashboard. As soon as you have assigned a reference value to an energy medium, you will not only see the total for consumption, costs and CO2 equivalent but also the amount per unit.
+
+To display the energy media analysis, follow these steps:
+
+- select the tab "My Plant"
+- go to the asset you just specified
+- the energy media dashboard is generated automatically as first dashboard within the asset
+- you can display either the collective information for all energy media or for each single energy medium
+
+![Energy_Media_Dashboard](/docs/graphics/Energy_Media_Dashboard.png)
