@@ -1,6 +1,6 @@
-# Configuration
+# Configuration and Usage
 
-- [Configuration](#configuration)
+- [Configuration and Usage](#configuration-and-usage)
   - [Configure PLC Connection](#configure-plc-connection)
   - [Energy Manager: KPI calculation](#energy-manager-kpi-calculation)
     - [Create KPI type](#create-kpi-type)
@@ -8,7 +8,7 @@
   - [Energy Manager: Data analysis with widgets](#energy-manager-data-analysis-with-widgets)
     - [Create heatmap diagram](#create-heatmap-diagram)
     - [Create diagram](#create-diagram)
-    - [Create sankey diagram](#create-sankey-diagram)
+    - [Create sankey](#create-sankey)
     - [Create duration curve](#create-duration-curve)
   - [Energy Manager: Energy media analysis](#energy-manager-energy-media-analysis)
 
@@ -180,31 +180,33 @@ Here we want to display the consumption costs for energy and water as line diagr
 
 ![Energy_Manager_Line_Diagram](/docs/graphics/Energy_Manager_Line_Diagram.png)
 
-### Create sankey diagram
+### Create sankey
 
-​Using the ​Sankey diagram​, energy flows can be displayed as arrows whose width is proportional to the flow rate. This makes it easy for you to recognize, for example, how energy is flowing through your plant.
+Using the Sankey diagram, energy flows can be visualized. The energy flows are displayed as arrows whose width is proportional to the flow rate.
 
-First you need to create a dashboard, klick on "add dashboard"
+Here we want to display the water and energy consumption as Sankey:
 
-Click "My Plant" at the top of the left side and create first widget:
+- go to the dashboard
+- click the settings button and choose "New widget" to start the wizard
 
-![Energy_Manager_create_first_widget](graphics/Energy_Manager_create_first_widget.PNG)
+1) choose the Sankey widget type > Continue
+2) enter a widget name and set the KPI calculation period to 1 Minute > Continue
+3) click "Select parameter" and choose the energy and water parameter (hint: choose them in the order you would like to see them in the diagram), for all set aggregation to 'Last' > Continue
 
-Select the Sankey Diagram widget:
+![Energy_Manager_Sankey_Parameter](/docs/graphics/Energy_Manager_Sankey_Parameter.png)
 
-![Energy_Manager_Sankey_Diagram_widget](graphics/Energy_Manager_sankey_diagram_widget.PNG)
+4) no need to change anything in the general display options > Continue
+5) in the tab 'Nodes' you need to create nodes with proper colours, that are later linked to the parameter:
 
-Create nodes which will be linked to the parameters. Select a colour for the respective nodes:
+![Energy_Manager_Sankey_Nodes](/docs/graphics/Energy_Manager_Sankey_Nodes.png)
 
-![Energy_Manager_Sankey_Diagram_define_display_options_nodes](graphics/Energy_Manager_sankey_diagram_define_display_options_nodes.PNG)
+5) go to the tab 'Links' and specify the links for each parameter from source node to destination node (you can also scale a link to show the proportions right):
 
-Link the nodes with the parameters of the respective parameters. Note the energy flow of the respective parameters:
+![Energy_Manager_Sankey_Links](/docs/graphics/Energy_Manager_Sankey_Links.png)
 
-![Energy_Manager_Sankey_Diagram_define_display_options_links](graphics/Energy_Manager_sankey_diagram_define_display_options_links.PNG)
+7)  > Finish
 
-Create Sankey diagram of combined energy and water consumption including single energy and water values:
-
-![Energy_Manager_Sankey_Diagram](graphics/Energy_Manager_sankey_diagram.PNG)
+![Energy_Manager_Sankey](/docs/graphics/Energy_Manager_Sankey.png)
 
 ### Create duration curve
 
