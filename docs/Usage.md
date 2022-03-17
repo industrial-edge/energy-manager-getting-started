@@ -111,7 +111,7 @@ You can, for example, display the energy consumption (red = high energy consumpt
 2) enter a widget name and set the KPI calculation period to 1 Minute > Continue
 3) click "Select parameter" and choose the KPI instance for 'Total energy' > Continue
 4) no need to change anything in the general display options > Continue
-5) no need to change anyting in the Heatmap dispaly options > Finish
+5) no need to change anything in the Heatmap display options > Finish
 
 This Heatmap now shows the total energy consumption over one day:
 
@@ -149,12 +149,12 @@ Here we want to display the consumption costs for energy and water as line diagr
 
 ![Energy_Manager_Line_KPI_Instance_1](/docs/graphics/Energy_Manager_Line_KPI_Instance_1.png)
 
-3) Again click "New KPI instance" to create an instance based on the KPI type 'Costs water', enter a name, selectthe KPI type and link the parameter 'WaterConsumption' to the signal 'waterConsumptionFillingTank' with aggregation 'Last' > Continue
+3) Again click "New KPI instance" to create an instance based on the KPI type 'Costs water', enter a name, select the KPI type and link the parameter 'WaterConsumption' to the signal 'waterConsumptionFillingTank' with aggregation 'Last' > Continue
 
 ![Energy_Manager_Line_KPI_Instance_2](/docs/graphics/Energy_Manager_Line_KPI_Instance_2.png)
 
 4) no need to change anything in the general display options > Continue
-5) no need to change anyting in the Chart dispaly options > Finish
+5) no need to change anything in the Chart display options > Finish
 
 ![Energy_Manager_Line_Diagram](/docs/graphics/Energy_Manager_Line_Diagram.png)
 
@@ -199,7 +199,7 @@ Here we want to display the KPI value for 'Total energy' as duration curve:
 2) enter a widget name and set the KPI calculation period to 1 Minute > Continue
 3) click "Select parameter" and choose the KPI instance for 'Total energy' > Continue
 4) no need to change anything in the general display options > Continue
-5) no need to change anyting in the Heatmap dispaly options > Finish
+5) no need to change anything in the Heatmap display options > Finish
 
 ![Energy_Manager_Duration_Curve](graphics/Energy_Manager_Duration_Curve.png)
 
