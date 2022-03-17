@@ -1,6 +1,6 @@
 # Energy Manager application example
 
-This example shows how to use the Industrial Edge App “Energy Manager” 
+This guide shows how to use the Industrial Edge application Energy Manager.
 
 - [Energy Manager application example](#energy-manager-application-example)
   - [Description](#description)
@@ -16,48 +16,44 @@ This example shows how to use the Industrial Edge App “Energy Manager”
   - [Contribution](#contribution)
   - [Licence and Legal Information](#licence-and-legal-information)
 
-
 ## Description
 
 ### Overview
 
-This document describes how you can display important PLC data such as energy data or costs for energy consumers in Energy Manager.
+The application Energy Manager provides information about how much energy has been consumed at any time. It will help to make the transition from energy transparency to energy efficiency. By analyzing the energy consumption together with the process data, processes and plants can be optimized. The Energy Manager provides one or more dashboards for data and energy analysis. Depending on the needs, there are several widget types available.
 
-![overview](docs/graphics/Overview.PNG)
+This repository describes how to use the Energy Manager for analyzing and optimizing energy consumption.
 
 ### General task
 
-The example reads the PLC data from the Data Service and displays it visually in Energy Manager. 
-The data is published via the S7 connector, Databus and on the Data Service, where Energy Manager can retrieve the desired data. 
-First, the S7 configurator and the Databus must be configured. Then, in the Data Service, select the required data that will later be displayed in the Energy Manager. In the Energy Manager, you select the data from the Data Service and visualize it using widgets such as Sankey, Heatmap or Duration curve or calculate the current energy consumption using a KPI and display it visually.
+![overview](docs/graphics/Overview.PNG)
+
+A PLC controls a filling process and the relevant energy data is collected by an Edge Device via the SIMATIC S7 Connector. On the Edge Device the data is published to the internal Databus. Then the data must be collected and modeled via the Data Service. From there the Energy Manager can retrieve the data for further analysis. First, we will proceed some KPI calculations. Then a custom dashboard with some widgets is created to visualize the energy data. Finally, we automatically create a dashboard using the energy media analysis.
 
 ## Requirements
 
-###  Prerequisities
+### Prerequisities
 
-- Access to an Industrial Edge Management System (IEM)
-- Onboarded Industial Edge Device on IEM
-- Installed System Configurators for Databus and S7 Connector
-- Installed System Apps Databus and S7 Connector
-- Installed Apps Data Service, Energy Manager
-- Edge device is connected to PLC
-- TIA portal project loaded on PLC (e.g. for filling application)
-- Google Chrome (Version ≥ 72) or Firefox (Version ≥ 62)
+- Access to an Industrial Edge Management (IEM) with onboarded Industrial Edge Device (IED)
+- Installed system configurators and apps (see list "Used components")
+- Installed apps (see list "Used components")
+- IED is connected to PLC
+- TIA portal project loaded on PLC
+- Google Chrome (Version ≥ 72)
 
 ### Used components
 
-- Industrial Edge Management (IEM) V1.2.0-34
-- S7 Connector Configurator V1.2.38
-- S7 Connector V1.2.26
-- IE Databus Configurator V1.2.29
-- IE Databus V1.2.16
-- Data Service V1.1.1
-- Energy Manager V1.2.0
-- Industrial Edge Device V 1.2.0-56
+- Industrial Edge Management (IEM) V1.4.0-42 / V1.5.6
+  - IE Databus Configurator V 1.6.19
+  - S7 Connector Configurator V 1.6.0-7
+- Industrial Edge Device (IED) V 1.2.0-56
+  - IE Databus V 1.6.3
+  - S7 Connector V 1.6.0-8
+- Data Service V 1.3.3
+- Energy Manager V1.3.2
 - TIA Portal V16
-- S7-1511
-- Web browser (Mozilla or Chrome)
-
+- CPU 1513-1
+- Google Chrome
 
 ### TIA Project
 
@@ -65,20 +61,27 @@ The used TIA Portal project can be found in the [miscellenous repository](https:
 
 ## Configuration steps
 
-You can find the further information about the following steps in the [docs](docs/Installation.md)
-- Configure PLC Connection
-- Configure Energy Manager
+To setup the PLC connection that is required to use the Energy Manager, several applications must be configured.
+
+You can find further information about the configuration steps [here](/docs/Installation.md).
 
 ## Usage
 
-Once the Energy Manager is configured, data such as energy consumption, energy costs and energy flows can be visually displayed via the web UI interface.  
+The Energy Manager can be used for analyzing energy data.
+
+You can find detailed information about the usage [here](/docs/Usage.md):
+
+- KPI calculation within the Energy Manager
+- Data analysis using widgets
+- Energy media analysis
 
 ## Documentation
 
 You can find further documentation and help in the following links
-  - [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
-  - [Industrial Edge Forum](https://www.siemens.com/industrial-edge-forum)
-  - [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
+
+- [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
+- [Industrial Edge Forum](https://www.siemens.com/industrial-edge-forum)
+- [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
   
 ## Contribution
 
