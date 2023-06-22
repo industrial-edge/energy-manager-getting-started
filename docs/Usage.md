@@ -86,7 +86,7 @@ At least one dashboard must be created on the dedicated asset:
 
 - select the tab "My Plant"
 - go to the dedicated asset "Energy"
-- click "Create first dashboard"
+- click "Add dashboard"
 - enter a name for the dashboard and save
 
 ![entry](/docs/graphics/Energy_Manager_Entry.png)
@@ -135,12 +135,12 @@ Here we want to display the consumption costs for energy and water as line diagr
 
 ![Energy_Manager_Line_KPI_Instance_1](/docs/graphics/Energy_Manager_Line_KPI_Instance_1.png)
 
-3) Again click "New KPI instance" to create an instance based on the KPI type 'Costs water', enter a name, select the KPI type and link the parameter 'WaterConsumption' to the signal 'waterConsumptionFillingTank' with aggregation 'Last' > Continue
+4) Again click "New KPI instance" to create an instance based on the KPI type 'Costs water', enter a name, select the KPI type and link the parameter 'WaterConsumption' to the signal 'waterConsumptionFillingTank' with aggregation 'Last' > Continue
 
 ![Energy_Manager_Line_KPI_Instance_2](/docs/graphics/Energy_Manager_Line_KPI_Instance_2.png)
 
-4) no need to change anything in the general display options > Continue
-5) no need to change anything in the Chart display options > Finish
+5) no need to change anything in the general display options > Continue
+6) no need to change anything in the Chart display options > Finish
 
 ![Energy_Manager_Line_Diagram](/docs/graphics/Energy_Manager_Line_Diagram.png)
 
@@ -164,11 +164,11 @@ Here we want to display the water and energy consumption as Sankey:
 
 ![Energy_Manager_Sankey_Nodes](/docs/graphics/Energy_Manager_Sankey_Nodes.png)
 
-5) go to the tab 'Links' and specify the links for each parameter from source node to destination node (you can also scale a link to show the proportions right):
+6) go to the tab 'Links' and specify the links for each parameter from source node to destination node (you can also scale a link to show the proportions right):
 
 ![Energy_Manager_Sankey_Links](/docs/graphics/Energy_Manager_Sankey_Links.png)
 
-5) Finish
+7) Finish
 
 ![Energy_Manager_Sankey](/docs/graphics/Energy_Manager_Sankey.png)
 
