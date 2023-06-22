@@ -121,20 +121,6 @@ This Heatmap now shows the total energy consumption over one day:
 
 Using the Diagram widget, you can display parameter values or calculated KPI values over time. There are several diagram types available. Also different aggregation functions can be selected for the values.
 
-**Bulk diagram**
-
-Here we want to display the KPI value for 'Total energy' for every 15 minutes as bulk diagram:
-
-- go to the dashboard
-- click the settings button and choose "New widget" to start the wizard
-
-1) choose the Diagram widget type > Continue
-2) enter a widget name and set the KPI calculation period to 15 Minutes > Continue
-3) click "Select parameter" and choose the KPI instance for 'Total energy' > Continue
-4) no need to change anything in the general display options > Continue
-5) choose "Bar" in the dropdown field for the chart type > Finish
-
-![Energy_Manager_Bulk_Diagram](/docs/graphics/Energy_Manager_Bulk_Diagram.png)
 
 **Line diagram**
 
@@ -226,8 +212,8 @@ Here we specifiy one asset:
 
 - select the tab "My Plant"
 - go to the asset you want to specify
-- click on the asset name and select "Asset Configuration"
-- choose "Assignment of energy medium"
+- click on "Add dashboard"
+- choose "Energy Media"
 
 ![Asset_Structure](graphics/Asset_Structure.png)
 
@@ -251,8 +237,8 @@ Here we define the contract information for one asset:
 
 - select the tab "My Plant"
 - go to the asset you want to specify
-- click on the asset name and select "Asset Configuration"
-- chosse "Contract information"
+- go to "Energy media"
+- click on "Edit energy media contracts"
 - set the currency to "Euro (EUR)"
 - add the energy medium "Electricity"
 - open the settings and add a contract
