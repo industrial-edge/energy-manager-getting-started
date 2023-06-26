@@ -2,8 +2,8 @@
 
 - [Configuration](#configuration)
   - [Configure PLC Connection](#configure-plc-connection)
-    - [Databus](#ie-databus)
-    - [OPC UA Connector](#simatic-s7-connector)
+    - [Databus](#databus)
+    - [OPC UA Connector](#opc-ua-connector)
     - [Data Service](#data-service)
 
 ## Configure PLC Connection
@@ -24,9 +24,9 @@ Finally the configurations should look like this:
 
 ### OPC UA Connector
 
-![S7_connector_data_source](/docs/graphics/S7_Connector_Data_Source.PNG)
+![S7_connector_data_source](/docs/graphics/OPCUA_Connector_Data_Source.PNG)
 
-![s7_connector_config](/docs/graphics/S7_Connector_Configuration.PNG)
+![s7_connector_config](/docs/graphics/OPCUA_Connector_Configuration.PNG)
 
 ### Data Service
 
