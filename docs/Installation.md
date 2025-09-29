@@ -3,19 +3,19 @@
 - [Configuration](#configuration)
   - [Configure PLC Connection](#configure-plc-connection)
     - [Databus](#databus)
-    - [OPC UA Connector](#opc-ua-connector)
-    - [Data Service](#data-service)
+    - [OPC UA Connector](#OPC-UA-Connector-configured-with-the-Common-Configurator)
+    - [IIH-Essentials](#IIH-Essentials)
 
 ## Configure PLC Connection
 
-To read data from the PLC and provide the data, we will configure the app OPC UA Connector with the Common Configurator to establish a connection to the PLC via OPC UA. The OPC UA Connector Connector publishes the data on the Databus, where the app Data Service can model and collect the energy data, that is needed. In order to build this infrastructure, these apps must be configured properly:
+To read data from the PLC and provide the data, we will configure the app OPC UA Connector with the Common Configurator to establish a connection to the PLC via OPC UA. The OPC UA Connector Connector publishes the data on the Databus, where the app IIH Essentials can model and collect the energy data, that is needed. In order to build this infrastructure, these apps must be configured properly:
 
 - Databus
 - OPC UA Connector
 - Common Configurator
-- Data Service
+- IIH Essentials
 
-Please refer to [using the IIH](https://github.com/industrial-edge/data-service) for detailed instructions.
+Please refer to [using the IIH Essentials](https://github.com/industrial-edge/iih-essentials-getting-started) for detailed instructions.
 
 Finally the configurations should look like this:
 
