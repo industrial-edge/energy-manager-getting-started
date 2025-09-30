@@ -72,7 +72,11 @@ Follow these steps to create a KPI instance in the parameter list based on our K
 - enter a unique instance name
 - select "On the basis of a KPI type"
 - select the KPI type for 'Total energy'
-- link all operands to a variable coming from Data Service and set the aggregation to "Last"
+- link all operands to a variable coming from IIH Hand set the aggregation to "Last"
+  - EnergyFillingTank -> Root.Objects.PLC.DataBlocksGlobal.GDB.signals.energySignals.energyConsumptionFillingTank
+  - EnergyFillingBottles -> Root.Objects.PLC.DataBlocksGlobal.GDB.signals.energySignals.energyConsumptionFillingBottles
+  - EnergyHeatingTank -> Root.Objects.PLC.DataBlocksGlobal.GDB.signals.energySignals.energyConsumptionHeatingTank
+> **Hint:** The full display name of the variables are displayed by hovering over the name, secondly they can be changed/shortened in the IIH Essentials. 
 
 ![Energy_Manager_KPI_Instance](/docs/graphics/Energy_Manager_KPI_Instance.png)
 
@@ -80,7 +84,7 @@ Follow these steps to create a KPI instance in the parameter list based on our K
 
 ## Energy Manager: Data analysis with widgets
 
-Within the Energy Manager you can create custom dashboards for data analysis. The input data comes from the previously configured app Data Service. The modelled data structure is then automatically displayed in the Energy Manager navigation tree.
+Within the Energy Manager you can create custom dashboards for data analysis. The input data comes from the previously configured app IIH Essential. The modelled data structure is then automatically displayed in the Energy Manager navigation tree.
 
 At least one dashboard must be created on the dedicated asset:
 

@@ -29,7 +29,7 @@ This repository describes how to use the Energy Manager for analyzing and optimi
 
 ![overview](docs/graphics/Overview.PNG)
 
-A PLC controls a filling process and the relevant energy data is collected by an Edge Device via the OPC UA Connector. On the Edge Device the data is published to the internal Databus. Then the data must be collected and modeled via the Data Service. From there the Energy Manager can retrieve the data for further analysis. First, we will proceed some KPI calculations. Then a custom dashboard with some widgets is created to visualize the energy data. Finally, we automatically create a dashboard using the energy media analysis.
+A PLC controls a filling process and the relevant energy data is collected by an Edge Device via the OPC UA Connector. On the Edge Device the data is published to the internal Databus. Then the data must be collected and modeled via the IIH Essentials. From there the Energy Manager can retrieve the data for further analysis. First, we will proceed some KPI calculations. Then a custom dashboard with some widgets is created to visualize the energy data. Finally, we automatically create a dashboard using the energy media analysis.
 
 ## Requirements
 
@@ -40,21 +40,22 @@ A PLC controls a filling process and the relevant energy data is collected by an
 - Installed apps (see list "Used components")
 - IED is connected to PLC
 - TIA portal project loaded on PLC
-- Google Chrome (Version ≥ 72)
+- Google Chrome (Version ≥ 72) or Firefox on Linux based system
 
 ### Used components
 
-- Industrial Edge Management (IEM) V1.5.2-4 / V1.11.8
-  - Databus Configurator V2.0.0-5
-  - Common Connector Configurator V1.8.1-4
-- Industrial Edge Device (IED) V1.10.0-9
-  - Databus V2.0.0-4
-  - OPC UA Connector V1.8.1
-- Data Service V 1.6.0
-- Energy Manager V1.15.0
+- Industrial Edge Management (IEM) V1.14.9
+  - Databus Configurator 
+  - Common Configurator V2.2.1
+- Industrial Edge Device (IED) V3.0.0-51
+  - Databus V3.2.1
+  - OPC UA Connector V2.4.2
+  - opt. Common Configurator V2.2.1
+  - IIH Essentials V2.2.1
+  - Energy Manager V1.21.1
 - TIA Portal V16
-- CPU 1513-1
-- Google Chrome
+- CPU 1513-1 (device can be changed in TIA to any 15XX too)
+- Google Chrome or Firefox
 
 ### TIA Project
 
