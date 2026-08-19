@@ -34,6 +34,9 @@ Follow these steps to create a new KPI type:
 - select the tab "Configuration"
 - choose "KPI types"
 - click "New KPI type"
+
+![](/docs/graphics/KPI_type.png)
+
 - enter a unique name and a unit
 - in the formula editor, use operants and operators to create this formula:
 
@@ -66,9 +69,13 @@ Follow these steps to create a KPI instance in the parameter list based on our K
 - select the tab "My Plant"
 - go to the dedicated asset "Energy" and open the parameter view
 
-![Energy_Manager_Parameter_View](/docs/graphics/Energy_Manager_Parameter_View.png)
+![Energy_Manager_Parameter_View](/docs/graphics/find_parameter.png)
 
 - click "New KPI instance" to add an instance
+
+![](/docs/graphics/parameter_view.png)
+
+
 - enter a unique instance name
 - select "On the basis of a KPI type"
 - select the KPI type for 'Total energy'
@@ -90,10 +97,11 @@ At least one dashboard must be created on the dedicated asset:
 
 - select the tab "My Plant"
 - go to the dedicated asset "Energy"
-- click "Add dashboard"
+- click "Add dashboard" and select "user defined dashboard"
+- - Upload or create a dashboard from scratch
 - enter a name for the dashboard and save
 
-![entry](/docs/graphics/Energy_Manager_Entry.png)
+![entry](/docs/graphics/user_defined_dashboard.png)
 
 Depending on the needs, there are several widget types available:
 
@@ -111,11 +119,13 @@ You can, for example, display the energy consumption (red = high energy consumpt
 - go to the newly created dashboard
 - select "Create first widget" to start the wizard
 
-1) choose the Heatmap widget type > Continue
-2) enter a widget name and set the KPI calculation period to 1 Minute > Continue
-3) click "Select parameter" and choose the KPI instance for 'Total energy' > Continue
-4) no need to change anything in the general display options > Continue
-5) no need to change anything in the Heatmap display options > Finish
+1) choose the Heatmap widget type and enter a widget name
+![Energy_Manager_Heatmap](/docs/graphics/select_heatmap.png)
+2) click "Select parameter" and choose the KPI instance for 'Total energy' > Next
+![Energy_Manager_Heatmap](/docs/graphics/choose_parameter.png)
+3) Set the trend calculation period to 1 minute > Create widget
+![Energy_Manager_Heatmap](/docs/graphics/heatmap_calculation_period.png)
+
 
 This Heatmap now shows the total energy consumption over one day:
 
