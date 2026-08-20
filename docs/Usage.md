@@ -34,6 +34,9 @@ Follow these steps to create a new KPI type:
 - select the tab "Configuration"
 - choose "KPI types"
 - click "New KPI type"
+
+![](/docs/graphics/KPI_type.png)
+
 - enter a unique name and a unit
 - in the formula editor, use operants and operators to create this formula:
 
@@ -66,9 +69,13 @@ Follow these steps to create a KPI instance in the parameter list based on our K
 - select the tab "My Plant"
 - go to the dedicated asset "Energy" and open the parameter view
 
-![Energy_Manager_Parameter_View](/docs/graphics/Energy_Manager_Parameter_View.png)
+![Energy_Manager_Parameter_View](/docs/graphics/find_parameter.png)
 
 - click "New KPI instance" to add an instance
+
+![](/docs/graphics/parameter_view.png)
+
+
 - enter a unique instance name
 - select "On the basis of a KPI type"
 - select the KPI type for 'Total energy'
@@ -90,10 +97,11 @@ At least one dashboard must be created on the dedicated asset:
 
 - select the tab "My Plant"
 - go to the dedicated asset "Energy"
-- click "Add dashboard"
+- click "Add dashboard" and select "user defined dashboard"
+- - Upload or create a dashboard from scratch
 - enter a name for the dashboard and save
 
-![entry](/docs/graphics/Energy_Manager_Entry.png)
+![entry](/docs/graphics/user_defined_dashboard.png)
 
 Depending on the needs, there are several widget types available:
 
@@ -111,11 +119,13 @@ You can, for example, display the energy consumption (red = high energy consumpt
 - go to the newly created dashboard
 - select "Create first widget" to start the wizard
 
-1) choose the Heatmap widget type > Continue
-2) enter a widget name and set the KPI calculation period to 1 Minute > Continue
-3) click "Select parameter" and choose the KPI instance for 'Total energy' > Continue
-4) no need to change anything in the general display options > Continue
-5) no need to change anything in the Heatmap display options > Finish
+1) choose the Heatmap widget type and enter a widget name
+![Energy_Manager_Heatmap](/docs/graphics/select_heatmap.png)
+2) click "Select parameter" and choose the KPI instance for 'Total energy' > Next
+![Energy_Manager_Heatmap](/docs/graphics/choose_parameter.png)
+3) Set the trend calculation period to 1 minute > Create widget
+![Energy_Manager_Heatmap](/docs/graphics/heatmap_calculation_period.png)
+
 
 This Heatmap now shows the total energy consumption over one day:
 
@@ -132,19 +142,18 @@ Here we want to display the consumption costs for energy and water as line diagr
 
 - go to the dashboard
 - click the settings button and choose "New widget" to start the wizard
+![](/docs/graphics/add_widget.png)
 
-1) choose the Diagram widget type > Continue
-2) enter a widget name and set the KPI calculation period to 15 Minutes > Continue
-3) click "New KPI instance" to create an instance based on the KPI type 'Costs energy', enter a name, select the KPI type and link the parameter 'TotalEnergy' to the already existing instance of 'Total Energy'
+1) choose the Diagram widget type and enter a widget name > Next
+2) click "New KPI instance" to create an instance based on the KPI type 'Costs energy', enter a name, select the KPI type and link the parameter 'TotalEnergy' to the already existing instance of 'Total Energy'
 
 ![Energy_Manager_Line_KPI_Instance_1](/docs/graphics/Energy_Manager_Line_KPI_Instance_1.png)
 
-4) Again click "New KPI instance" to create an instance based on the KPI type 'Costs water', enter a name, select the KPI type and link the parameter 'WaterConsumption' to the signal 'waterConsumptionFillingTank' with aggregation 'Last' > Continue
+3) Again click "New KPI instance" to create an instance based on the KPI type 'Costs water', enter a name, select the KPI type and link the parameter 'WaterConsumption' to the signal 'waterConsumptionFillingTank' with aggregation 'Last' > Next
 
 ![Energy_Manager_Line_KPI_Instance_2](/docs/graphics/Energy_Manager_Line_KPI_Instance_2.png)
 
-5) no need to change anything in the general display options > Continue
-6) no need to change anything in the Chart display options > Finish
+3) Set the KPI calculation period to 15 Minutes > Create 
 
 ![Energy_Manager_Line_Diagram](/docs/graphics/Energy_Manager_Line_Diagram.png)
 
@@ -157,22 +166,24 @@ Here we want to display the water and energy consumption as Sankey:
 - go to the dashboard
 - click the settings button and choose "New widget" to start the wizard
 
-1) choose the Sankey widget type > Continue
-2) enter a widget name and set the KPI calculation period to 1 Minute > Continue
-3) click "Select parameter" and choose the energy and water parameter (hint: choose them in the order you would like to see them in the diagram), for all set aggregation to 'Last' > Continue
+1) choose the Sankey widget type and name the widget > Next
+2) click "Select parameter" and choose the energy and water parameter (hint: move the parameters using the 6 dots on the left hand side and draging the parameter to sort them in the order you would like to see them in the diagram)
 
-![Energy_Manager_Sankey_Parameter](/docs/graphics/Energy_Manager_Sankey_Parameter.png)
+![Energy_Manager_Sankey_Parameter](/docs/graphics/sankey_prameters.png)
 
-4) no need to change anything in the general display options > Continue
-5) in the tab 'Nodes' you need to create nodes with proper colours, that are later linked to the parameter:
-
+3) for each parameter, click on edit to change the aggregation to "Last" and add nodes
+4) in the first parameter to add nodes, you need to create nodes with proper colours, that are later linked to the parameter:
+![Energy_Manager_Sankey_Nodes](/docs/graphics/add_nodes.png)
+Once the first one is created, to create the rest, just click on the + sign where you select the nodes
+![Energy_Manager_Sankey_Nodes](/docs/graphics/add_another_node.png)
+All nodes necessary to be created are:
 ![Energy_Manager_Sankey_Nodes](/docs/graphics/Energy_Manager_Sankey_Nodes.png)
 
-6) go to the tab 'Links' and specify the links for each parameter from source node to destination node (you can also scale a link to show the proportions right):
+5) for each parameter asign the following source node to destination node (you can also scale a link to show the proportions right):
 
 ![Energy_Manager_Sankey_Links](/docs/graphics/Energy_Manager_Sankey_Links.png)
 
-7) Finish
+6) Set the KPI calculation period to 1 Minute > Create widget
 
 ![Energy_Manager_Sankey](/docs/graphics/Energy_Manager_Sankey.png)
 
@@ -185,11 +196,9 @@ Here we want to display the KPI value for 'Total energy' as duration curve:
 - go to the dashboard
 - click the settings button and choose "New widget" to start the wizard
 
-1) choose the Duration Curve widget type > Continue
-2) enter a widget name and set the KPI calculation period to 1 Minute > Continue
-3) click "Select parameter" and choose the KPI instance for 'Total energy' > Continue
-4) no need to change anything in the general display options > Continue
-5) no need to change anything in the Heatmap display options > Finish
+1) choose the Duration Curve widget type and give the widget a name> Next
+2) click "Select parameter" and choose the KPI instance for 'Total energy' > Next
+3) Set the KPI calculation period to 1 Minute > Create
 
 ![Energy_Manager_Duration_Curve](graphics/Energy_Manager_Duration_Curve.png)
 
@@ -219,7 +228,7 @@ Here we specifiy one asset:
 - click on "Add dashboard"
 - choose "Energy Media"
 
-![Asset_Structure](graphics/Asset_Structure.png)
+![Asset_Structure](graphics/energy_media.png)
 
 - add a new row and select "Electricity" as energy medium
 - in the parameter column, click "Select parameter" to assign a suitable process value, here we choose the KPI instance for 'Total Energy'
@@ -227,11 +236,11 @@ Here we specifiy one asset:
 - in the parameter column, click "Select parameter" to assign a suitable process value, here we choose the parameter 'waterConsumption' and select "Last" as aggregation type
 - save the configuration
 
-![Energy_Media_Asset](graphics/Energy_Media_Asset.png)
+![Energy_Media_Asset](graphics/parameter_energy_medium.png)
 
-By assigning parameters that represent the energy medium, all KPI instances required for the energy media analysis are automatically created in the parameter list.
+By assigning parameters that represent the energy medium, all KPI instances required for the energy media analysis are automatically. They can be found on the parameter list as shown previously on this document
 
-![Energy_Media_Instances](graphics/Energy_Media_Instances.png)
+![Energy_Media_Instances](graphics/new_KPI_instances.png)
 
 ### Defining contract information
 
@@ -251,7 +260,7 @@ Here we define the contract information for one asset:
 - open the settings and add a contract
 - configure the contract information and save
 
-![Contract_Information](graphics/Contract_Information.png)
+![Contract_Information](graphics/contract_info.png)
 
 ### Displaying the energy media analysis
 
