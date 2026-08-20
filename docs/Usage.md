@@ -169,7 +169,7 @@ Here we want to display the water and energy consumption as Sankey:
 1) choose the Sankey widget type and name the widget > Next
 2) click "Select parameter" and choose the energy and water parameter (hint: move the parameters using the 6 dots on the left hand side and draging the parameter to sort them in the order you would like to see them in the diagram)
 
-![Energy_Manager_Sankey_Parameter](/docs/graphics/sankey_parameters.png)
+![Energy_Manager_Sankey_Parameter](/docs/graphics/sankey_prameters.png)
 
 3) for each parameter, click on edit to change the aggregation to "Last" and add nodes
 4) in the first parameter to add nodes, you need to create nodes with proper colours, that are later linked to the parameter:
