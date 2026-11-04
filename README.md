@@ -44,16 +44,16 @@ A PLC controls a filling process and the relevant energy data is collected by an
 
 ### Used components
 
-- Industrial Edge Management (IEM) V1.14.9
+- Industrial Edge Management (IEM) V2.3.2
   - Databus Configurator 
   - Common Configurator V2.2.1
-- Industrial Edge Device (IED) V3.0.0-51
-  - Databus V3.2.1
-  - OPC UA Connector V2.4.2
-  - opt. Common Configurator V2.2.1
-  - IIH Essentials V2.2.1
-  - Energy Manager V1.21.1
-- TIA Portal V16
+- Industrial Edge Device (IED) V1.28.1-2-b
+  - Databus V4.0.0
+  - OPC UA Connector V2.4.4 or OPC UA High Performance Connector v1.2.1
+  - opt. Common Configurator V2.6
+  - IIH Essentials V2.6
+  - Energy Manager V1.26.0
+- TIA Portal V21
 - CPU 1513-1 (device can be changed in TIA to any 15XX too)
 - Google Chrome or Firefox
 
