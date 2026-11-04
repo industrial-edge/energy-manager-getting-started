@@ -34,7 +34,7 @@ Follow these steps to create a new KPI type:
 - select the tab "Configuration"
 - choose "KPI types"
 - click "New KPI type"
-
+  
 ![](/docs/graphics/KPI_type.png)
 
 - enter a unique name and a unit
