@@ -20,12 +20,12 @@ Please refer to [using the IIH Essentials](https://github.com/industrial-edge/ii
 Finally the configurations should look like this:
 
 ### Databus
-
-![ie_databus](/docs/graphics/IE_Databus.PNG)
+![ie_databus](/docs/graphics/Databus_IEM.png)
+![ie_databus](/docs/graphics/Databus_Config.png)
 
 ### OPC UA Connector configured with the Common Configurator
 
-![OPC_UA Connector Source](/docs/graphics/OPCUA_Connector_Data_Source.PNG)
+![OPC_UA Connector Source](/docs/graphics/OPC-UA_Connection.png)
 
 ![OCUA Connector Tags](/docs/graphics/OPCUA_Connector_Configuration.PNG)
 
